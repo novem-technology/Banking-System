@@ -1,6 +1,10 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
+import Account from './views/Account.vue';
+import Atm from './views/Atm.vue';
+import Employee from './views/Employee.vue';
+import About from './views/About.vue';
 
 Vue.use(Router);
 
@@ -12,6 +16,21 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home,
+    },
+    {
+      path: '/account',
+      name: 'account',
+      component: Account,
+    },
+    {
+      path: '/atm',
+      name: 'atm',
+      component: Atm,
+    },
+    {
+      path: '/employee',
+      name: 'employee',
+      component: Employee,
     },
     {
       path: '/about',
