@@ -1,8 +1,7 @@
 <template>
   <div class="profile">
     <ProfileNavbar pageTitle="Transfer Money"/>
-    <h1>Under Construction</h1>
-    <!-- <div id="profile-container" class="container">
+    <div id="profile-container" class="container">
       <div class="row">
         <div class="col-4">
           <div id="balance-panel" class="container panel no-padding-margin">
@@ -10,26 +9,24 @@
           </div>
         </div>
         <div class="col-8">
-          <div id="transactions-panel" class="container panel">
-            <Transactions/>
-          </div>
+            <Transfer/>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import ProfileNavbar from '@/components/ProfileNavbar.vue';
 import Balance from '@/components/account/Balance.vue';
-import Transactions from '@/components/account/Transactions.vue';
+import Transfer from '@/components/account/Transfer.vue';
 
 export default {
   name: 'account',
   components: {
     ProfileNavbar,
     Balance,
-    Transactions,
+    Transfer,
   },
 };
 </script>

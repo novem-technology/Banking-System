@@ -4,7 +4,10 @@
     <div id="profile-container" class="container">
       <div class="row">
         <div class="col-8">
-
+          <div class="container panel view-panel">
+            <h2>Pleaser enter pin number for card:</h2>
+            <h3>****-****-****-4812</h3>
+          </div>
         </div>
         <div class="col-4">
           <ul class="list-group list-group-flush panel">
@@ -216,5 +219,10 @@ export default class Atm extends Vue {
 
 .under-padding {
   padding-bottom: 15px;
+}
+
+.view-panel {
+  padding-top: 50px;
+  height: 500px;
 }
 </style>
