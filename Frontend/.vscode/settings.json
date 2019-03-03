@@ -1,0 +1,39 @@
+{
+	"javascript.implicitProjectConfig.experimentalDecorators": true,
+	"editor.tabSize": 4,
+	"gitlens.currentLine.enabled": false,
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/bin": true,
+		"**/obj": true,
+		"**/*.userprefs": true,
+		"**/.vs": true,
+		"**/.idea": true,
+		"**/.nupkg": true,
+		"**/node_modules": true,
+		"**/*.d.ts": true,
+		"dist": true
+	},
+	"[html]": {
+		"editor.tabSize": 2
+	},
+	"[javascript]": {
+		"editor.tabSize": 2
+	},
+	"[typescript]": {
+		"editor.tabSize": 2
+	},
+	"[vue]": {
+		"editor.tabSize": 2
+	},
+	"[css]": {
+		"editor.tabSize": 2
+	},
+	"[scss]": {
+		"editor.tabSize": 2
+	}
+}
