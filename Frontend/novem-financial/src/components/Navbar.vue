@@ -2,11 +2,7 @@
   <nav class="navbar fixed-top navbar-expand-lg navbar-light navbar-custom">
     <div class="container">
       <a class="navbar-brand" href="/">
-        <img
-          id="hipo-logo-navbar"
-          alt="Vue logo"
-          src="@/assets/branding/dr-hipo-logo-transparent-black.png"
-        >
+        Novem Financial
       </a>
       <button
         class="navbar-toggler"
@@ -29,15 +25,15 @@
             <a class="nav-link" href="/about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/contact">Contact Us</a>
+            <a class="nav-link" href="/atm">ATM</a>
           </li>
         </ul>
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/profile">Login</a>
+            <a class="nav-link" href="/account">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/profile">Register</a>
+            <a class="nav-link" href="/account">Register</a>
           </li>
         </ul>
       </div>

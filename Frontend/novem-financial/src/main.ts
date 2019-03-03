@@ -1,6 +1,10 @@
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
+import 'bootstrap';
+import 'bootstrap/js/dist/modal';
+import 'bootstrap/js/dist/tooltip';
+import 'bootstrap/scss/bootstrap.scss';
 
 Vue.config.productionTip = false;
 
