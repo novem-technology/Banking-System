@@ -1,4 +1,4 @@
-# novem-financial
+# Novem Financial (frontend)
 
 ## Requirements
 
