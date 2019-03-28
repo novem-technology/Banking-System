@@ -15,7 +15,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
-export default class ProfileNavbar extends Vue {
+export default class Balance extends Vue {
   @Prop() private amount!: string;
 }
 </script>

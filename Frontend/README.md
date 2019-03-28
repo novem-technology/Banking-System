@@ -17,3 +17,9 @@ npm install
 ```bash
 npm run serve
 ```
+
+### Run unit tests
+
+```bash
+npm run test:unit
+```
