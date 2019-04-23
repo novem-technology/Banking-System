@@ -53,7 +53,7 @@ export default {
 
       // stop here if form is invalid
       if (!(usernameOrEmail && password)) {
-        alert('username or email is invalid')
+        alert('username or email is invalid');
         return;
       }
 
@@ -64,7 +64,7 @@ export default {
           (error) => {
             this.error = error;
             this.loading = false;
-            alert("Invalid credentials");
+            alert('Invalid credentials');
           },
         );
     },

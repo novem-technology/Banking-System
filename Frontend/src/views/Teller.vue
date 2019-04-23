@@ -12,6 +12,11 @@
           <div id="transactions-panel" class="container panel">
             <Transactions/>
           </div>
+          <ul>
+            <li v-for="user in users">
+              <div>{{user.firstName}} {{user.lastName}}</div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -34,10 +39,12 @@ export default {
   data() {
     return {
       tellerName: '',
+      users: [],
     };
   },
   created() {
-    userService.getAll();
+    const response = userService.getAll();
+    users = response;
   },
 };
 </script>

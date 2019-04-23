@@ -31,11 +31,11 @@ function login(usernameOrEmail, password) {
         });
 }
 
-function register(name, username, email, password) {
+function createCustomer(customerName, username, email, password) {
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, username, email, password })
+        body: JSON.stringify({ customerName, username, email, password })
     };
 
     return fetch(`${apiUrl}/api/auth/signup`, requestOptions)
