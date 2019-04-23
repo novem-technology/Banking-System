@@ -4,6 +4,7 @@ import Home from './views/Home.vue';
 import Login from './views/Login.vue';
 import Register from './views/Register.vue';
 import About from './views/About.vue';
+import Teller from './views/Teller.vue';
 import Employee from './views/Employee.vue';
 import Atm from './views/atm/Atm.vue';
 import Account from './views/account/Account.vue';
@@ -35,6 +36,11 @@ export default new Router({
       path: '/atm',
       name: 'atm',
       component: Atm,
+    },
+    {
+      path: '/teller',
+      name: 'teller',
+      component: Teller,
     },
     {
       path: '/employee',
