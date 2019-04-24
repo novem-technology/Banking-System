@@ -5,6 +5,8 @@ const apiUrl = 'http://localhost:18080'
 export const userService = {
     login,
     logout,
+    register,
+    createCustomer,
     getAll
 };
 
@@ -31,7 +33,7 @@ function login(usernameOrEmail, password) {
         });
 }
 
-function createCustomer(customerName, username, email, password) {
+function register(customerName, username, email, password) {
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -40,6 +42,26 @@ function createCustomer(customerName, username, email, password) {
 
     return fetch(`${apiUrl}/api/auth/signup`, requestOptions)
         .then(handleResponse);
+}
+
+function createCustomer(id,
+    firstname, lastName, dateOfBirth, ssn,
+    address1, address2, city, state, zip,
+    email, phoneNumber, userName, password) {
+    const requestOptions = {
+        method: 'POST',
+        headers: authHeader(),
+        body: JSON.stringify({ id,
+            firstname, lastName, dateOfBirth, ssn,
+            address1, address2, city, state, zip,
+            email, phoneNumber, userName, password })
+    };
+
+    return fetch(`${apiUrl}/Customer`, requestOptions)
+        .then(handleResponse)
+        .then((user) => {
+            console.log(user);
+        });
 }
 
 function logout() {
@@ -53,7 +75,7 @@ function getAll() {
         headers: authHeader()
     };
 
-    return fetch(`${apiUrl}/users`, requestOptions).then(handleResponse);
+    return fetch(`${apiUrl}/Customer`, requestOptions).then(handleResponse);
 }
 
 function handleResponse(response) {

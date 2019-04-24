@@ -10,6 +10,7 @@ import Atm from './views/atm/Atm.vue';
 import Account from './views/account/Account.vue';
 import Transfer from './views/account/Transfer.vue';
 import Loans from './views/account/Loans.vue';
+import CreateCustomer from './views/account/CreateCustomer.vue';
 
 Vue.use(Router);
 
@@ -70,5 +71,10 @@ export default new Router({
       name: 'loans',
       component: Loans,
     },
+    {
+      path: '/teller/create-customer',
+      name: 'create customer',
+      component: CreateCustomer
+    }
   ],
 });

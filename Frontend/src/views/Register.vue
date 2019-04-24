@@ -20,7 +20,7 @@
             </div>
             <div class="form-group">
               <label for="usr">Password:</label>
-              <input type="text" v-model="password" class="form-control" id="usr">
+              <input type="password" v-model="password" class="form-control" id="usr">
             </div>
             <div class="form-group">
               <label for="pwd">Repeat Password:</label>
@@ -35,10 +35,11 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue';
 import Navbar from '@/components/Navbar.vue';
 import { userService } from '../_services';
+import router from '../router';
 
 export default {
   components: {
@@ -50,22 +51,22 @@ export default {
       username: '',
       email: '',
       password: '',
-    }
+    };
   },
   methods: {
 
     handleSubmit(e) {
       this.submitted = true;
-      const { usernameOrEmail, password } = this;
+      const { customerName, username, email, password } = this;
 
       // stop here if form is invalid
-      if (!(usernameOrEmail && password)) {
-        alert('username or email is invalid');
+      if (!(customerName && username && email && password)) {
+        alert('Invalid registration data');
         return;
       }
 
       this.loading = true;
-      //userService.register(usernameOrEmail, password)
+      userService.register(customerName, username, email, password)
         .then(
           (user) => router.push('/teller'),
           (error) => {
@@ -75,7 +76,7 @@ export default {
           },
         );
     },
-  }
+  },
 };
 </script>
 

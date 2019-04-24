@@ -61,11 +61,6 @@ export default {
       userService.login(usernameOrEmail, password)
         .then(
           (user) => router.push('/teller'),
-          (error) => {
-            this.error = error;
-            this.loading = false;
-            alert('Invalid credentials');
-          },
         );
     },
   },

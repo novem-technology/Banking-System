@@ -5,18 +5,14 @@
       <div class="row">
         <div class="col-4">
           <div id="balance-panel" class="container panel no-padding-margin">
-            <Balance amount="865"/>
+            <a href="/teller/create-customer">Create Customer</a>
           </div>
         </div>
         <div class="col-8">
-          <div id="transactions-panel" class="container panel">
-            <Transactions/>
+          <div id="transactions-panel" class="container panel" v-for="user in users" v-bind:key="user">
+            <p>Name: {{user.firstName}} {{user.lastName}}</p>
+            <p>Email: {{user.email}}</p>
           </div>
-          <ul>
-            <li v-for="user in users">
-              <div>{{user.firstName}} {{user.lastName}}</div>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
@@ -43,15 +39,27 @@ export default {
     };
   },
   created() {
-    const response = userService.getAll();
-    users = response;
+    const response = userService.getAll()
+      .then((user) => {
+        console.log(user);
+        this.users = user;
+      });
   },
+  methods: {
+    handleSubmit() {
+      router.push('/teller/create-customer')
+    }
+  }
 };
 </script>
 
 <style lang="scss">
 @import '@/scss/_palette.scss';
 @import '@/scss/_settings.scss';
+
+ul li {
+  text-align: left !important; 
+}
 
 #profile-container {
   padding-top: $main-content-top-padding;
@@ -74,6 +82,7 @@ export default {
   margin-bottom: 0;
   padding-left: 0;
   padding-right: 0;
+  text-align: left !important; 
 }
 
 .panel {
