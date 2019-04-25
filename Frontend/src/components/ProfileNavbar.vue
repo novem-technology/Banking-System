@@ -32,12 +32,12 @@
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
-            >My Account</a>
+            >Teller Menu</a>
             <div
               class="dropdown-menu dropdown-menu-right no-radius"
               aria-labelledby="navbarDropdown"
             >
-              <a class="dropdown-item" href="/Teller">Teller Home</a>
+              <a class="dropdown-item" href="/Teller">Home</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="/account/transfer">Transfer Money</a>
               <a class="dropdown-item" href="/account/loans">Manage Loans</a>

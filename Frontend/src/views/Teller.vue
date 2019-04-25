@@ -49,7 +49,7 @@ export default {
   },
   methods: {
     handleSubmit(user) {
-      localStorage.setItem('chosenUser', user);
+      localStorage.setItem('chosenUser', JSON.stringify(user));
       router.push('/teller/manage-accounts');
     }
   }

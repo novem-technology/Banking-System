@@ -10,9 +10,17 @@
               <li class="list-group-heading">
                 <h3>{{ user.firstName }} {{ user.lastName }}</h3>
               </li>
-              <li class="list-group-item">
-                <h3>Amount</h3>
-              </li>
+              <li class="list-group-item">ID: {{ user.id }}</li>
+              <li class="list-group-item">Username: {{ user.userName }}</li>
+              <li class="list-group-item">Email: {{ user.email }}</li>
+              <li class="list-group-item">Phone Number:{{ user.phoneNumber }}</li>
+              <li class="list-group-item">Birthdate: {{ user.dateOfBirth }}</li>
+              <li class="list-group-item">SSN: {{ user.ssn }}</li>
+              <li class="list-group-item">Address 1: {{ user.address1 }}</li>
+              <li class="list-group-item">Address 1: {{ user.address2 }}</li>
+              <li class="list-group-item">City: {{ user.city }}</li>
+              <li class="list-group-item">State: {{ user.state }}</li>
+              <li class="list-group-item">Zipcode: {{ user.zip }}</li>
             </ul>
           </div>
           </div>
@@ -47,16 +55,9 @@ export default {
     };
   },
   created() {
-    let id = localStorage.getItem('userId');
-        console.log(id);
-    this.user = userService.getById(id).then(
-      (user) => {
-        console.log(user);
-        this.user = user
-      }
-    ).then(
-      (error) => console.log(error)
-    );
+    let chosenUser = JSON.parse(localStorage.getItem('chosenUser'));
+    console.log(chosenUser);
+    this.user = chosenUser;
   },
 };
 </script>
