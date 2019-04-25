@@ -41,7 +41,7 @@ export default {
   },
   created() {
     // reset login status
-    userService.logout();
+    //userService.logout();
 
     // get return url from route parameters or default to '/'
     this.returnUrl = this.$route.query.returnUrl || '/';

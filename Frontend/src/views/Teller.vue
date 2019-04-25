@@ -1,6 +1,6 @@
 <template>
   <div class="profile">
-    <ProfileNavbar pageTitle="Account Overview"/>
+    <ProfileNavbar pageTitle="Teller Overview"/>
     <div id="profile-container" class="container">
       <div class="row">
         <div class="col-4">
@@ -41,15 +41,13 @@ export default {
   created() {
     const response = userService.getAll()
       .then((user) => {
-        console.log(localStorage)
-        let token = localStorage.getItem('NovemToken');
-        console.log(token);
-        console.log(user);
         this.users = user;
       });
   },
   methods: {
     handleSubmit() {
+      let token = localStorage.getItem('NovemToken');
+      console.log(token.accessToken);
       router.push('/teller/create-customer')
     }
   }

@@ -1,6 +1,6 @@
 <template>
   <div id="register-page">
-    <Navbar/>
+    <ProfileNavbar pageTitle="Create Customer" />
     <div class="container">
       <div class="row">
         <div class="col-4"></div>
@@ -77,13 +77,13 @@
 
 <script>
 import Vue from 'vue';
-import Navbar from '@/components/Navbar.vue';
+import ProfileNavbar from '@/components/ProfileNavbar.vue';
 import { userService } from '../../_services';
 import router from '../../router';
 
 export default {
   components: {
-    Navbar,
+    ProfileNavbar,
   },
   data() {
     return {
@@ -106,7 +106,6 @@ export default {
     };
   },
   created() {
-    userService.logout();
   },
   methods: {
     handleSubmit(e) {
@@ -129,28 +128,13 @@ export default {
         this.password)
         .then(
           (user) => router.push('/teller'),
+        )
+        .then(
           (error) => {
             this.error = error;
             this.loading = false;
-            
-            console.log(this.customerId);
-            console.log(this.firstName);
-            console.log(this.lastName);
-            console.log(this.dateOfBirth);
-            console.log(this.ssn);
-            console.log(this.address1);
-            console.log(this.address2);
-            console.log(this.city);
-            console.log(this.state);
-            console.log(this.zip);
-            console.log(this.email);
-            console.log(this.phoneNumber);
-            console.log(this.userName);
-            console.log(this.password);
-
-            alert('Invalid credentials');
-          },
-        );
+            console.log(error);
+          });
     },
   },
 };
