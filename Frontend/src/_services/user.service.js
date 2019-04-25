@@ -7,7 +7,8 @@ export const userService = {
     logout,
     register,
     createCustomer,
-    getAll
+    getAll,
+    getById,
 };
 
 function login(usernameOrEmail, password) {
@@ -79,6 +80,15 @@ function getAll() {
     };
 
     return fetch(`${apiUrl}/Customer`, requestOptions).then(handleResponse);
+}
+
+function getById(id) {
+    const requestOptions = {
+        method: 'GET',
+        headers: authHeader()
+    };
+
+    return fetch(`${apiUrl}/Customer/${id}`, requestOptions).then(handleResponse);
 }
 
 function handleResponse(response) {

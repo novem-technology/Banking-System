@@ -2,9 +2,6 @@ export function authHeader() {
   // return authorization header with basic auth credentials
   let info = localStorage.getItem('NovemToken');
   let user = JSON.parse(info);
-
-  console.log(user);
-
   if (user && user.accessToken) {
       return {
         'Authorization': 'Bearer ' + user.accessToken,

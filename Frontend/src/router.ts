@@ -3,8 +3,8 @@ import Router from 'vue-router';
 import Home from './views/Home.vue';
 import Login from './views/Login.vue';
 import Register from './views/Register.vue';
-import About from './views/About.vue';
 import Teller from './views/Teller.vue';
+import ManageAccounts from './views/ManageAccounts.vue';
 import Employee from './views/Employee.vue';
 import Atm from './views/atm/Atm.vue';
 import Account from './views/account/Account.vue';
@@ -75,6 +75,11 @@ export default new Router({
       path: '/teller/create-customer',
       name: 'create customer',
       component: CreateCustomer
+    },
+    {
+      path: '/teller/manage-accounts',
+      name: 'manage accounts',
+      component: ManageAccounts
     }
   ],
 });

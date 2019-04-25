@@ -1,19 +1,25 @@
 <template>
   <div class="profile">
-    <ProfileNavbar pageTitle="Teller Overview"/>
+    <ProfileNavbar pageTitle="Account Overview"/>
     <div id="profile-container" class="container">
       <div class="row">
         <div class="col-4">
           <div id="balance-panel" class="container panel no-padding-margin">
-            <a href="/teller/create-customer">Create Customer</a>
+            <div id="account-balance">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-heading">
+                <h3>{{ user.firstName }} {{ user.lastName }}</h3>
+              </li>
+              <li class="list-group-item">
+                <h3>Amount</h3>
+              </li>
+            </ul>
+          </div>
           </div>
         </div>
         <div class="col-8">
-          <div id="transactions-panel" class="container panel" v-for="user in users" v-bind:key="user">
-            <p>Name: {{user.firstName}} {{user.lastName}}</p>
-            <p>Email: {{user.email}}</p>
-            <p>Accounts: {{user.accounts.length}}</p>
-            <button v-on:click="handleSubmit(user)">Manage Accounts</button>
+          <div id="transactions-panel" class="container panel">
+            <Transactions/>
           </div>
         </div>
       </div>
@@ -26,7 +32,6 @@ import ProfileNavbar from '@/components/ProfileNavbar.vue';
 import Balance from '@/components/account/Balance.vue';
 import Transactions from '@/components/account/Transactions.vue';
 import { userService } from '../_services';
-import router from '../router';
 
 export default {
   name: 'account',
@@ -38,31 +43,27 @@ export default {
   data() {
     return {
       tellerName: '',
-      users: [],
+      user: '',
     };
   },
   created() {
-    const response = userService.getAll()
-      .then((user) => {
-        this.users = user;
-      });
+    let id = localStorage.getItem('userId');
+        console.log(id);
+    this.user = userService.getById(id).then(
+      (user) => {
+        console.log(user);
+        this.user = user
+      }
+    ).then(
+      (error) => console.log(error)
+    );
   },
-  methods: {
-    handleSubmit(user) {
-      localStorage.setItem('chosenUser', user);
-      router.push('/teller/manage-accounts');
-    }
-  }
 };
 </script>
 
 <style lang="scss">
 @import '@/scss/_palette.scss';
 @import '@/scss/_settings.scss';
-
-ul li {
-  text-align: left !important; 
-}
 
 #profile-container {
   padding-top: $main-content-top-padding;
@@ -85,13 +86,6 @@ ul li {
   margin-bottom: 0;
   padding-left: 0;
   padding-right: 0;
-  text-align: left !important; 
-}
-
-.big-name {
-  font-size: 26px !important;
-  font-weight: bold;
-
 }
 
 .panel {

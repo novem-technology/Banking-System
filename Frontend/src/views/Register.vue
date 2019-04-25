@@ -68,7 +68,10 @@ export default {
       this.loading = true;
       userService.register(customerName, username, email, password)
         .then(
-          (user) => router.push('/teller'),
+          (user) => {
+            alert('Success: please login with your credentials')
+            router.push('/login')
+          },
           (error) => {
             this.error = error;
             this.loading = false;
