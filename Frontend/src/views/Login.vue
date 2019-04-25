@@ -14,7 +14,7 @@
               <label for="pwd">Password:</label>
               <input type="password" v-model="password" class="form-control" id="pwd">
             </div>
-            <button v-on:click="handleSubmit()">Login</button>
+            <button class="btn btn-primary" v-on:click="handleSubmit()">Login</button>
           </div>
         </div>
         <div class="col-4"></div>

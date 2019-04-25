@@ -39,8 +39,8 @@
             >
               <a class="dropdown-item" href="/Teller">Home</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/account/transfer">Transfer Money</a>
-              <a class="dropdown-item" href="/account/loans">Manage Loans</a>
+              <!-- <a class="dropdown-item" href="/account/transfer">Transfer Money</a>
+              <a class="dropdown-item" href="/account/loans">Manage Loans</a> -->
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="/">Logout</a>
             </div>

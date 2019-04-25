@@ -11,7 +11,7 @@
                 <h3>{{ user.firstName }} {{ user.lastName }}</h3>
               </li>
               <li class="list-group-item">ID: {{ user.id }}</li>
-              <li class="list-group-item">Username: {{ user.userName }}</li>
+              <li class="list-group-item">Username: {{ user.username }}</li>
               <li class="list-group-item">Email: {{ user.email }}</li>
               <li class="list-group-item">Phone Number:{{ user.phoneNumber }}</li>
               <li class="list-group-item">Birthdate: {{ user.dateOfBirth }}</li>
@@ -27,7 +27,15 @@
         </div>
         <div class="col-8">
           <div id="transactions-panel" class="container panel">
-            <Transactions/>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-heading">
+                <h3>Accounts</h3>
+              </li>
+              <li class="list-group-item" v-for="account in accounts" v-bind:key="account">
+                Account #: {{ account.accountNumber }}
+                <p>Balance: ${{ account.balance }}<button class="btn btn-primary float-right">Manage</button></p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -52,6 +60,11 @@ export default {
     return {
       tellerName: '',
       user: '',
+      accounts: [
+        { accountNumber: 12951, balance: 11239 },
+        { accountNumber: 53362, balance: 143 },
+        { accountNumber: 56789, balance: 1235 },
+      ]
     };
   },
   created() {

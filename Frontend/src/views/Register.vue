@@ -26,7 +26,7 @@
               <label for="pwd">Repeat Password:</label>
               <input type="password" class="form-control" id="pwd">
             </div>
-            <button v-on:click="handleSubmit()">Register</button>
+            <button class="btn btn-primary" v-on:click="handleSubmit()">Register</button>
           </div>
         </div>
         <div class="col-4"></div>

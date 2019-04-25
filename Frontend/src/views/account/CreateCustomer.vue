@@ -3,8 +3,8 @@
     <ProfileNavbar pageTitle="Create Customer" />
     <div class="container">
       <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4">
+        <div class="col-3"></div>
+        <div class="col-6">
           <div class="register-form panel">
             <div class="form-group">
               <label for="usr">ID:</label>
@@ -66,10 +66,10 @@
               <label for="pwd">Repeat Password:</label>
               <input type="password" class="form-control" id="pwd">
             </div>
-            <button v-on:click="handleSubmit()">Register</button>
+            <button class="btn btn-primary" v-on:click="handleSubmit()">Register</button>
           </div>
         </div>
-        <div class="col-4"></div>
+        <div class="col-3"></div>
       </div>
     </div>
   </div>

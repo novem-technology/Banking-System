@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-4">
           <div id="balance-panel" class="container panel no-padding-margin">
-            <Balance amount="865"/>
+            <!-- <Balance amount="865"/> -->
           </div>
         </div>
         <div class="col-8">

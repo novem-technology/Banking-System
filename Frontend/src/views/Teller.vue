@@ -12,8 +12,10 @@
           <div id="transactions-panel" class="container panel" v-for="user in users" v-bind:key="user">
             <p>Name: {{user.firstName}} {{user.lastName}}</p>
             <p>Email: {{user.email}}</p>
-            <p>Accounts: {{user.accounts.length}}</p>
-            <button v-on:click="handleSubmit(user)">Manage Accounts</button>
+            <p>
+              Accounts: 3
+              <button class="btn btn-primary float-right" v-on:click="handleSubmit(user)">Manage</button>
+            </p>
           </div>
         </div>
       </div>

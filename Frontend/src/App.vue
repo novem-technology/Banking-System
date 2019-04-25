@@ -42,6 +42,11 @@ body {
   height: $navbar-height - 10;
 }
 
+button {
+  // background-color: #0066dd;
+  // border: none;
+}
+
 .navbar {
   height: $navbar-height;
   background-color: $palette-white;
@@ -66,5 +71,9 @@ body {
 
 .nav-non-link {
   color: $palette-black !important;
+}
+
+.float-right {
+  float: right;
 }
 </style>

@@ -10,6 +10,10 @@
           <input type="text" class="form-control" id="usr">
         </div>
         <div class="form-group">
+          <label for="usr">Account From:</label>
+          <input type="text" class="form-control" id="usr">
+          <label for="usr">Amount To:</label>
+          <input type="text" class="form-control" id="usr">
           <label for="usr">Amount:</label>
           <input type="text" class="form-control" id="usr">
         </div>
