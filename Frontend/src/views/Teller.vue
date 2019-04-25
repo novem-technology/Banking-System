@@ -41,6 +41,9 @@ export default {
   created() {
     const response = userService.getAll()
       .then((user) => {
+        console.log(localStorage)
+        let token = localStorage.getItem('NovemToken');
+        console.log(token);
         console.log(user);
         this.users = user;
       });

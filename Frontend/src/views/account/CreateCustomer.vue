@@ -52,11 +52,11 @@
             </div>
             <div class="form-group">
               <label for="usr">Phone Number:</label>
-              <input type="text" v-model="firstName" class="form-control" id="usr">
+              <input type="text" v-model="phoneNumber" class="form-control" id="usr">
             </div>
             <div class="form-group">
               <label for="usr">Username:</label>
-              <input type="text" v-model="username" class="form-control" id="usr">
+              <input type="text" v-model="userName" class="form-control" id="usr">
             </div>
             <div class="form-group">
               <label for="usr">Password:</label>
@@ -66,7 +66,7 @@
               <label for="pwd">Repeat Password:</label>
               <input type="password" class="form-control" id="pwd">
             </div>
-            <a class="btn btn-primary" href="/account">Register</a>
+            <button v-on:click="handleSubmit()">Register</button>
           </div>
         </div>
         <div class="col-4"></div>
@@ -88,7 +88,7 @@ export default {
   data() {
     return {
       customerId:  '',
-      firstname: '',
+      firstName: '',
       lastName: '',
       dateOfBirth: '',
       ssn: '',
@@ -114,7 +114,7 @@ export default {
       this.loading = true;
       userService.createCustomer(
         this.customerId,
-        this.firstname,
+        this.firstName,
         this.lastName,
         this.dateOfBirth,
         this.ssn,
@@ -132,6 +132,22 @@ export default {
           (error) => {
             this.error = error;
             this.loading = false;
+            
+            console.log(this.customerId);
+            console.log(this.firstName);
+            console.log(this.lastName);
+            console.log(this.dateOfBirth);
+            console.log(this.ssn);
+            console.log(this.address1);
+            console.log(this.address2);
+            console.log(this.city);
+            console.log(this.state);
+            console.log(this.zip);
+            console.log(this.email);
+            console.log(this.phoneNumber);
+            console.log(this.userName);
+            console.log(this.password);
+
             alert('Invalid credentials');
           },
         );

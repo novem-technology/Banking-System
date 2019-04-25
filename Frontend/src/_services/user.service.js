@@ -17,6 +17,8 @@ function login(usernameOrEmail, password) {
         body: JSON.stringify({ usernameOrEmail, password })
     };
 
+    console.log(requestOptions);
+
     return fetch(`${apiUrl}/api/auth/signin`, requestOptions)
         .then(handleResponse)
         .then(user => {
@@ -25,43 +27,44 @@ function login(usernameOrEmail, password) {
                 // store user details and basic auth credentials in local storage 
                 // to keep user logged in between page refreshes
                 console.log(user);
-                user.authdata = user.accessToken;
-                localStorage.setItem('token', JSON.stringify(user));
+                localStorage.setItem('NovemToken', JSON.stringify(user));
             }
 
             return user;
         });
 }
 
-function register(customerName, username, email, password) {
+function register(name, username, email, password) {
     const requestOptions = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ customerName, username, email, password })
+        body: JSON.stringify({ name, username, email, password })
     };
+
+    console.log(requestOptions);
 
     return fetch(`${apiUrl}/api/auth/signup`, requestOptions)
         .then(handleResponse);
 }
 
 function createCustomer(id,
-    firstname, lastName, dateOfBirth, ssn,
+    firstName, lastName, dateOfBirth, ssn,
     address1, address2, city, state, zip,
     email, phoneNumber, userName, password) {
     const requestOptions = {
         method: 'POST',
         headers: authHeader(),
         body: JSON.stringify({ id,
-            firstname, lastName, dateOfBirth, ssn,
+            firstName, lastName, dateOfBirth, ssn,
             address1, address2, city, state, zip,
             email, phoneNumber, userName, password })
     };
 
+    console.log(requestOptions);
+
     return fetch(`${apiUrl}/Customer`, requestOptions)
         .then(handleResponse)
-        .then((user) => {
-            console.log(user);
-        });
+        .then((e) => console.log(e));
 }
 
 function logout() {

@@ -26,7 +26,7 @@
               <label for="pwd">Repeat Password:</label>
               <input type="password" class="form-control" id="pwd">
             </div>
-            <a class="btn btn-primary" href="/account">Register</a>
+            <button v-on:click="handleSubmit()">Register</button>
           </div>
         </div>
         <div class="col-4"></div>
@@ -72,6 +72,7 @@ export default {
           (error) => {
             this.error = error;
             this.loading = false;
+            console.log(error);
             alert('Invalid credentials');
           },
         );
