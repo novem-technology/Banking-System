@@ -42,9 +42,10 @@ body {
   height: $navbar-height - 10;
 }
 
-button {
+.btn {
   // background-color: #0066dd;
   // border: none;
+  width: auto !important;
 }
 
 .navbar {

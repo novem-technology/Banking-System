@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar fixed-top navbar-expand-lg navbar-light navbar-custom">
     <div class="container">
-      <a class="navbar-brand" href="/account">
+      <a class="navbar-brand" href="/teller">
         Novem Financial
       </a>
       <button
@@ -37,7 +37,7 @@
               class="dropdown-menu dropdown-menu-right no-radius"
               aria-labelledby="navbarDropdown"
             >
-              <a class="dropdown-item" href="/Teller">Home</a>
+              <a class="dropdown-item" href="/teller">Home</a>
               <div class="dropdown-divider"></div>
               <!-- <a class="dropdown-item" href="/account/transfer">Transfer Money</a>
               <a class="dropdown-item" href="/account/loans">Manage Loans</a> -->

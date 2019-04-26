@@ -11,6 +11,7 @@ import Account from './views/account/Account.vue';
 import Transfer from './views/account/Transfer.vue';
 import Loans from './views/account/Loans.vue';
 import CreateCustomer from './views/account/CreateCustomer.vue';
+import CreateAccount from './views/account/CreateAccount.vue';
 
 Vue.use(Router);
 
@@ -62,7 +63,7 @@ export default new Router({
       component: Account,
     },
     {
-      path: '/account/transfer',
+      path: '/teller/transfer',
       name: 'transfer',
       component: Transfer,
     },
@@ -80,6 +81,11 @@ export default new Router({
       path: '/teller/manage-accounts',
       name: 'manage accounts',
       component: ManageAccounts
-    }
+    },
+    {
+      path: '/teller/create-account',
+      name: 'create account',
+      component: CreateAccount
+    },
   ],
 });

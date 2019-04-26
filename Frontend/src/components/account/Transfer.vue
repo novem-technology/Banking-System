@@ -17,7 +17,7 @@
           <label for="usr">Amount:</label>
           <input type="text" class="form-control" id="usr">
         </div>
-        <a class="btn btn-primary" href="/account">Transfer</a>
+        <a class="btn btn-primary" href="/teller">Transfer</a>
       </li>
     </ul>
   </div>

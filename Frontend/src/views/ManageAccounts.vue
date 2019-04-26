@@ -6,23 +6,26 @@
         <div class="col-4">
           <div id="balance-panel" class="container panel no-padding-margin">
             <div id="account-balance">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-heading">
-                <h3>{{ user.firstName }} {{ user.lastName }}</h3>
-              </li>
-              <li class="list-group-item">ID: {{ user.id }}</li>
-              <li class="list-group-item">Username: {{ user.username }}</li>
-              <li class="list-group-item">Email: {{ user.email }}</li>
-              <li class="list-group-item">Phone Number:{{ user.phoneNumber }}</li>
-              <li class="list-group-item">Birthdate: {{ user.dateOfBirth }}</li>
-              <li class="list-group-item">SSN: {{ user.ssn }}</li>
-              <li class="list-group-item">Address 1: {{ user.address1 }}</li>
-              <li class="list-group-item">Address 1: {{ user.address2 }}</li>
-              <li class="list-group-item">City: {{ user.city }}</li>
-              <li class="list-group-item">State: {{ user.state }}</li>
-              <li class="list-group-item">Zipcode: {{ user.zip }}</li>
-            </ul>
-          </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-heading">
+                  <h3>{{ user.firstName }} {{ user.lastName }}</h3>
+                </li>
+                <li class="list-group-item">ID: {{ user.id }}</li>
+                <li class="list-group-item">Username: {{ user.username }}</li>
+                <li class="list-group-item">Email: {{ user.email }}</li>
+                <li class="list-group-item">Phone Number:{{ user.phoneNumber }}</li>
+                <li class="list-group-item">Birthdate: {{ user.dateOfBirth }}</li>
+                <li class="list-group-item">SSN: {{ user.ssn }}</li>
+                <li class="list-group-item">Address 1: {{ user.address1 }}</li>
+                <li class="list-group-item">Address 1: {{ user.address2 }}</li>
+                <li class="list-group-item">City: {{ user.city }}</li>
+                <li class="list-group-item">State: {{ user.state }}</li>
+                <li class="list-group-item">Zipcode: {{ user.zip }}</li>
+              </ul>
+              <div class="panel">
+                <button class="btn btn-primary">Create Account</button>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-8">
@@ -117,5 +120,15 @@ export default {
 .no-padding-margin {
   padding: 0px !important;
   margin: 0px !important;
+}
+
+.list-group-heading {
+  background: transparent !important;
+  padding: 15px !important;
+}
+
+.panel {
+  background: transparent !important;
+  border: 0px !important;
 }
 </style>

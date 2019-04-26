@@ -18,104 +18,104 @@
               <div class="row under-padding">
                 <div class="col-4">
                   <div v-if="this.isMaxLength()">
-                    <button type="button" class="btn btn-secondary" disabled>1</button>
+                    <button type="button" class="btn btn-atm btn-secondary" disabled>1</button>
                   </div>
                   <div v-else>
-                    <button type="button" class="btn btn-primary" v-on:click="numpadOne()">1</button>
+                    <button type="button" class="btn btn-atm btn-primary" v-on:click="numpadOne()">1</button>
                   </div>
                 </div>
                 <div class="col-4">
                   <div v-if="this.isMaxLength()">
-                    <button type="button" class="btn btn-secondary" disabled>2</button>
+                    <button type="button" class="btn btn-atm btn-secondary" disabled>2</button>
                   </div>
                   <div v-else>
-                    <button type="button" class="btn btn-primary" v-on:click="numpadTwo()">2</button>
+                    <button type="button" class="btn btn-atm btn-primary" v-on:click="numpadTwo()">2</button>
                   </div>
                 </div>
                 <div class="col-4">
                   <div v-if="this.isMaxLength()">
-                    <button type="button" class="btn btn-secondary" disabled>3</button>
+                    <button type="button" class="btn btn-atm btn-secondary" disabled>3</button>
                   </div>
                   <div v-else>
-                    <button type="button" class="btn btn-primary" v-on:click="numpadThree()">3</button>
-                  </div>
-                </div>
-              </div>
-              <div class="row under-padding">
-                <div class="col-4">
-                  <div v-if="this.isMaxLength()">
-                    <button type="button" class="btn btn-secondary" disabled>4</button>
-                  </div>
-                  <div v-else>
-                    <button type="button" class="btn btn-primary" v-on:click="numpadFour()">4</button>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div v-if="this.isMaxLength()">
-                    <button type="button" class="btn btn-secondary" disabled>5</button>
-                  </div>
-                  <div v-else>
-                    <button type="button" class="btn btn-primary" v-on:click="numpadFive()">5</button>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div v-if="this.isMaxLength()">
-                    <button type="button" class="btn btn-secondary" disabled>6</button>
-                  </div>
-                  <div v-else>
-                    <button type="button" class="btn btn-primary" v-on:click="numpadSix()">6</button>
+                    <button type="button" class="btn btn-atm btn-primary" v-on:click="numpadThree()">3</button>
                   </div>
                 </div>
               </div>
               <div class="row under-padding">
                 <div class="col-4">
                   <div v-if="this.isMaxLength()">
-                    <button type="button" class="btn btn-secondary" disabled>7</button>
+                    <button type="button" class="btn btn-atm btn-secondary" disabled>4</button>
                   </div>
                   <div v-else>
-                    <button type="button" class="btn btn-primary" v-on:click="numpadSeven()">7</button>
+                    <button type="button" class="btn btn-atm btn-primary" v-on:click="numpadFour()">4</button>
                   </div>
                 </div>
                 <div class="col-4">
                   <div v-if="this.isMaxLength()">
-                    <button type="button" class="btn btn-secondary" disabled>8</button>
+                    <button type="button" class="btn btn-atm btn-secondary" disabled>5</button>
                   </div>
                   <div v-else>
-                    <button type="button" class="btn btn-primary" v-on:click="numpadEight()">8</button>
+                    <button type="button" class="btn btn-atm btn-primary" v-on:click="numpadFive()">5</button>
                   </div>
                 </div>
                 <div class="col-4">
                   <div v-if="this.isMaxLength()">
-                    <button type="button" class="btn btn-secondary" disabled>9</button>
+                    <button type="button" class="btn btn-atm btn-secondary" disabled>6</button>
                   </div>
                   <div v-else>
-                    <button type="button" class="btn btn-primary" v-on:click="numpadNine()">9</button>
+                    <button type="button" class="btn btn-atm btn-primary" v-on:click="numpadSix()">6</button>
+                  </div>
+                </div>
+              </div>
+              <div class="row under-padding">
+                <div class="col-4">
+                  <div v-if="this.isMaxLength()">
+                    <button type="button" class="btn btn-atm btn-secondary" disabled>7</button>
+                  </div>
+                  <div v-else>
+                    <button type="button" class="btn btn-atm btn-primary" v-on:click="numpadSeven()">7</button>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div v-if="this.isMaxLength()">
+                    <button type="button" class="btn btn-atm btn-secondary" disabled>8</button>
+                  </div>
+                  <div v-else>
+                    <button type="button" class="btn btn-atm btn-primary" v-on:click="numpadEight()">8</button>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div v-if="this.isMaxLength()">
+                    <button type="button" class="btn btn-atm btn-secondary" disabled>9</button>
+                  </div>
+                  <div v-else>
+                    <button type="button" class="btn btn-atm btn-primary" v-on:click="numpadNine()">9</button>
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-4">
                   <div v-if="this.isMinLength()">
-                    <button type="button" class="btn btn-secondary" disabled>Back</button>
+                    <button type="button" class="btn btn-atm btn-secondary" disabled>Back</button>
                   </div>
                   <div v-else>
-                    <button type="button" class="btn btn-primary" v-on:click="numpadBack()">Back</button>
+                    <button type="button" class="btn btn-atm btn-primary" v-on:click="numpadBack()">Back</button>
                   </div>
                 </div>
                 <div class="col-4">
                   <div v-if="this.isMaxLength()">
-                    <button type="button" class="btn btn-secondary" disabled>0</button>
+                    <button type="button" class="btn btn-atm btn-secondary" disabled>0</button>
                   </div>
                   <div v-else>
-                    <button type="button" class="btn btn-primary" v-on:click="numpadZero()">0</button>
+                    <button type="button" class="btn btn-atm btn-primary" v-on:click="numpadZero()">0</button>
                   </div>
                 </div>
                 <div class="col-4">
                   <div v-if="this.isMaxLength()">
-                    <button type="button" class="btn btn-primary" v-on:click="numpadEnter()">Enter</button>
+                    <button type="button" class="btn btn-atm btn-primary" v-on:click="numpadEnter()">Enter</button>
                   </div>
                   <div v-else>
-                    <button type="button" class="btn btn-secondary" disabled>Enter</button>
+                    <button type="button" class="btn btn-atm btn-secondary" disabled>Enter</button>
                   </div>
                 </div>
               </div>
@@ -215,6 +215,10 @@ export default class Atm extends Vue {
 .btn {
   height: 45px;
   width: 90px;
+}
+
+.btn-atm {
+  width: 90px !important;
 }
 
 .under-padding {

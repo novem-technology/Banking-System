@@ -4,8 +4,8 @@
     <div id="profile-container" class="container">
       <div class="row">
         <div class="col-4">
-          <div id="balance-panel" class="container panel no-padding-margin">
-            <a href="/teller/create-customer">Create Customer</a>
+          <div id="balance-panel" class="container panel">
+            <a class="btn btn-primary" href="/teller/create-customer">Create Customer</a>
           </div>
         </div>
         <div class="col-8">
@@ -14,7 +14,7 @@
             <p>Email: {{user.email}}</p>
             <p>
               Accounts: 3
-              <button class="btn btn-primary float-right" v-on:click="handleSubmit(user)">Manage</button>
+              <button class="btn btn-primary float-right" v-on:click="handleSubmit(user)">Manage Accounts</button>
             </p>
           </div>
         </div>
@@ -88,6 +88,10 @@ ul li {
   padding-left: 0;
   padding-right: 0;
   text-align: left !important; 
+}
+
+.panel {
+  padding: 15px !important;
 }
 
 .big-name {
